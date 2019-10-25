@@ -1,8 +1,8 @@
 const assert = require('assert');
-const tasks = require('../tasks/03-url-shortner-tasks');
+const tasks = require('../tasks/03-url-shortener-tasks');
 it.optional = require('../extensions/it-optional');
 
-describe('03-url-shortner-tasks', function() {
+describe('03-url-shortener-tasks', function() {
   it.optional('urlShortener should return encoded string shorter than original url', () => {
     [
         'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/imul',
