@@ -5,9 +5,9 @@ This repo contains javascript assignments which are tested for correctness but n
 The assignment begins from reading this README. We expect you to have a base understanding of standard web development principles, including git and npm/yarn.
 We also believe in documenting our code properly, this project is not an exception.
 
-* Clone this repo
+* Clone this repo, and open the directory in terminal
 * Create a new branch titled `assignment-firstname-lastname`
-* Install the project dependencies with yarn (or npm)
+* Install the project dependencies with yarn (or npm) `yarn install`
 * Open the project, complete the `tasks` and run `yarn test` to see your progress
 
 * If it wasn't given to you as a do-at-home, build the two design elements within the `web` folder using your chosen method
