@@ -7,7 +7,7 @@ We also believe in documenting our code properly, this project is not an excepti
 
 * Clone this repo
 * Create a new branch titled `assignment-firstname-lastname`
-* Install the project dependcies with yarn (or npm)
+* Install the project dependencies with yarn (or npm)
 * Open the project, complete the `tasks` and run `yarn test` to see your progress
 
 * If it wasn't given to you as a do-at-home, build the two design elements within the `web` folder using your chosen method
