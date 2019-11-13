@@ -1,4 +1,3 @@
-![faq image](designs/faq.png)
-![ask image](designs/ask.png)
+![screenshot image](designs/screenshot.png)
 
 Please make your best effort to build these designs in HTML and stylesheets.
