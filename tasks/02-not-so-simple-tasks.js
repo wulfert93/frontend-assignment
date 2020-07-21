@@ -23,29 +23,60 @@
   *      { country: 'Russia',  city: 'Saint Petersburg' }
   */
 const sortCitiesArray = (arr) => {
-  throw new Error('Not implemented');
-};
-
+  if(arr)
+  {
+    return arr.sort(function (a, b){
+      const countryA = a.country.toUpperCase();
+      const countryB = b.country.toUpperCase();
+      if (countryA < countryB) 
+      {
+        return -1;
+      }
+      if (countryA > countryB) 
+      {
+        return 1;
+      }
+      if(countryA == countryB)
+      {
+        const cityA = a.city.toUpperCase();
+        const cityB = b.city.toUpperCase();
+        if(cityA < cityB)
+        {
+          return -1;
+        }
+        if (cityA > cityB) 
+        {  
+        return 1;
+        }
+      }
+  // names must be equal
+      return 0;
+    });
+  }
+  else
+  {
+  throw new Error('array not given');
+}};
 /**
- * Returns the number rounded to specified power of 10.
- *
- * @param {number} num
- * @param {number} pow
- * @return {number}
- *
- * @example:
- *   1234, 0  => 1234
- *   1234, 1  => 1230
- *   1234, 2  => 1200
- *   1234, 3  => 1000
- *   1678, 0  => 1678
- *   1678, 1  => 1680
- *   1678, 2  => 1700
- *   1678, 3  => 2000
- */
-const roundToPowerOfTen = (num, pow) => {
-  throw new Error('Not implemented');
-};
+//  * Returns the number rounded to specified power of 10.
+//  *
+//  * @param {number} num
+//  * @param {number} pow
+//  * @return {number}
+//  *
+//  * @example:
+//  *   1234, 0  => 1234
+//  *   1234, 1  => 1230
+//  *   1234, 2  => 1200
+//  *   1234, 3  => 1000
+//  *   1678, 0  => 1678
+//  *   1678, 1  => 1680
+//  *   1678, 2  => 1700
+//  *   1678, 3  => 2000
+//  */
+// const roundToPowerOfTen = (num, pow) => {
+//   throw new Error('Not implemented');
+// };
 
 /**
  * Reverse the specified integer number (put all digits in reverse order)
@@ -60,12 +91,19 @@ const roundToPowerOfTen = (num, pow) => {
  *   34143 => 34143
  */
 const reverseInteger = (num) => {
-  throw new Error('Not implemented');
-};
+  if(num)
+  {
+    const str = (num.toString());
+    return str.split("").reverse().join("");
+  }
+  else
+  {
+  throw new Error('no numbers are given');
+}};
 
 /**
  * Returns the human readable string of time period specified by the start and end time.
- * The result string should be constrcuted using the folliwing rules:
+ * The result string should be constrcuted using the following rules:
  *
  * ---------------------------------------------------------------------
  *   Difference                 |  Result
@@ -94,12 +132,21 @@ const reverseInteger = (num) => {
  *   Date('2000-01-01 01:00:00.100'), Date('2015-01-02 03:00:05.000')  => '15 years ago'
  *
  */
-const timespanToHumanString = (startDate, endDate) => {
-  throw new Error('Not implemented');
-};
-
+// const timespanToHumanString = (starpDate, endDate) => {
+//   if(starpDate && endDate)
+//   {
+//     console.log('both param are given');
+//     console.log(endDate.Date)
+//     console.log(starpDate)
+//     console.log(endDate - starpDate);
+//   }
+//   else
+//   {
+//   throw new Error('Not implemented');
+// }};
+// timespanToHumanString(Date('2000-01-01 01:00:00.100'), Date('2000-01-01 01:00:00.200'))
 /**
- * Returns the rectagle object with width and height parameters and getArea() method
+ * Returns the rectangle object with width and height parameters and getArea() method
  *
  * @param {number} width
  * @param {number} height
@@ -114,10 +161,17 @@ const timespanToHumanString = (startDate, endDate) => {
 
 class Rectangle {
   constructor(width, height) {
-    throw new Error('Not implemented');
-  }
+    if(width && height)
+    {
+      this.width = width;
+      this.height = height;
+      this.getArea = () => width * height;
+    }
+    else
+    {
+    throw new Error('width of height not given, cannot create new Rectangle');
+  }}
 }
-
 /**
  * Returns the first non repeated char in the specified strings otherwise returns null.
  *
@@ -129,10 +183,27 @@ class Rectangle {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-const findFirstSingleChar = (str) => {
-  throw new Error('Not implemented');
-};
-
+// const findFirstSingleChar = (str) => {
+//   if(str)
+//   {
+//     for (i=0; i<str.length; i++) 
+//     {
+//       if (str.indexOf(str[i]) !== str.lastIndexOf(str[i]) ) {
+//         console.log(`repeats`);
+//         return;
+//       }
+//       else{
+//         console.log(`does not repeat`);
+//         return;
+//       }
+//       console.log()
+//     }
+//   }
+//   else
+//   {
+//   throw new Error('No string is given');
+// }};
+// console.log(findFirstSingleChar('baard'));
 /**
  * Returns the password validator regex.
  * Regex will validate a password to make sure it meets the follwing criteria:
@@ -159,10 +230,10 @@ const getPasswordValidator = (minLength) => {
 
 module.exports = {
   sortCitiesArray,
-  roundToPowerOfTen,
+  //roundToPowerOfTen,
   reverseInteger,
-  timespanToHumanString,
+  //timespanToHumanString,
   Rectangle,
-  findFirstSingleChar,
+  //findFirstSingleChar,
   getPasswordValidator,
 };

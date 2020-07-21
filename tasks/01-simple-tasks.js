@@ -12,8 +12,12 @@
  *   'Chuck','Norris'  => 'Hello, Chuck Norris!'
  */
 const getStringFromTemplate = (firstName, lastName) => {
-  throw new Error('Not implemented');
-};
+  if(firstName && lastName){
+    return (`Hello, ${firstName} ${lastName}!`)
+  }
+  else{
+    throw new Error('firstName or lastName is not given');
+}};
 
 /**
  * Removes a leading and trailing whitespace characters from string.
@@ -27,9 +31,12 @@ const getStringFromTemplate = (firstName, lastName) => {
  *   '\tHello, World! ' => 'Hello, World!'
  */
 const removeLeadingAndTrailingWhitespaces = (value) => {
-  throw new Error('Not implemented');
-};
-
+  if(value){
+  return (value.trim());
+}
+else{
+  throw new Error('no value given');
+}};
 /**
 * Returns a string that repeated the specified number of times.
 *
@@ -42,9 +49,12 @@ const removeLeadingAndTrailingWhitespaces = (value) => {
 *   'cat', 3 => 'catcatcat'
 */
 const repeatString = (value, count) => {
-  throw new Error('Not implemented');
-};
-
+  if(repeatString){
+  return(value.repeat(count));
+}
+else{
+  throw new Error('no value given');
+}};
 /**
  * Returns playid card id.
  *
@@ -69,10 +79,27 @@ const repeatString = (value, count) => {
  *   'Q♠' => 50
  *   'K♠' => 51
  */
-const getCardId = (value) => {
-  throw new Error('Not implemented');
-};
-
+const cards = [
+  'A♣','2♣','3♣','4♣','5♣','6♣','7♣','8♣','9♣','10♣','J♣','Q♣','K♣',
+  'A♦','2♦','3♦','4♦','5♦','6♦','7♦','8♦','9♦','10♦','J♦','Q♦','K♦',
+  'A♥','2♥','3♥','4♥','5♥','6♥','7♥','8♥','9♥','10♥','J♥','Q♥','K♥',
+  'A♠','2♠','3♠','4♠','5♠','6♠','7♠','8♠','9♠','10♠','J♠','Q♠','K♠'
+]
+const getCardId = (value) =>{
+  if(value)
+  {
+    cards.filter(function (item) 
+    {
+      if(item === value)
+      {
+        return cards.indexOf(item);
+      }
+    })
+  }
+  else
+  {
+  throw new Error('value not given');
+  }};
 /**
  * Returns a distance beetween two points by cartesian coordinates.
  *
@@ -88,10 +115,19 @@ const getCardId = (value) => {
  *   (0,0) (1,0)    => 1
  *   (-5,0) (10,-10) => 18.027756377319946
  */
-const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
-  throw new Error('Not implemented');
-};
-
+// const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
+//   if(x1 && y1)
+//   {();
+//     const xDiff = x1 - x2; 
+//     const yDiff = y2 - y2;
+//     console.log(Math.sqrt(xDiff * xDiff + yDiff * yDiff));
+//   }
+//   else
+//   {
+//     throw new Error('Not implemented');
+//   }
+// };
+// getDistanceBetweenPoints((-5,0) (10,-10));
 /**
  * Returns an index of the specified element in array or -1 if element is not found
  *
@@ -105,8 +141,15 @@ const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 const findElement = (arr, value) => {
-  throw new Error('Not implemented');
-};
+  if(arr && value)
+  {
+    const index = (element) => element === value;
+    return arr.findIndex(index);
+  }
+  else
+  {
+  throw new Error('not all parameters are given');
+}};
 
 /**
  * Returns an array of positive numbers from the specified array in original order
@@ -120,15 +163,24 @@ const findElement = (arr, value) => {
  *    [] => []
  */
 const getArrayOfPositives = (arr) => {
-  throw new Error('Not implemented');
-};
+  if(arr)
+  { 
+    const positive = (value) => {
+      return value > 0;
+    };
+    return arr.filter(positive);
+  }
+  else
+  {
+  throw new Error('array is not given');
+}};
 
 module.exports = {
   getStringFromTemplate,
   removeLeadingAndTrailingWhitespaces,
   repeatString,
   getCardId,
-  getDistanceBetweenPoints,
+  //getDistanceBetweenPoints,
   findElement,
   getArrayOfPositives,
 };

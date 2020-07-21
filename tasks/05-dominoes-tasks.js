@@ -19,8 +19,14 @@
  *
  */
 const canDominoesMakeRow = (dominoes) => {
+  if(dominoes)
+  {
+    //do
+  }
+  else
+  {
   throw new Error('Not implemented');
-};
+}};
 
 module.exports = {
   canDominoesMakeRow,

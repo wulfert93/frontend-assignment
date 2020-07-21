@@ -30,9 +30,15 @@ const PokerRank = {
   HighCard: 0,
 };
 
-const getPokerHandRank = (hand) => {
+const getPokerHandRank = (hand) => {  
+  if (hand)
+  {
+    //do
+  }
+  else
+  {
   throw new Error('Not implemented');
-};
+}};
 
 module.exports = {
   PokerRank,
