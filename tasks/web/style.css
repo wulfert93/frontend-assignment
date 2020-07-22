@@ -1,0 +1,15 @@
+@font-face{
+    font-family: Europa-Bold;
+    src: url(./assets/fonts/Europa-Bold.otf)
+}
+*{
+    font-family: Europa-Bold;
+}
+/* FormBox */
+.contactFormBox{
+    text-align: center;
+    background-color: aquamarine;
+    /* display: flex;
+    flex-flow: row wrap;
+    align-items: center; */
+}
