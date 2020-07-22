@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="style.css">    </head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Hiber WebTask - Wulfert</title>    
+    </head>
     <body>
         <div class="contactFormBox">
             <h2>We're always ready to help</h2>
             <h1>Got a question? Ask away.</h1>
             <p>Send us a message and we'll get back to you within 24 hours. If not sooner</p>
-            <form class="contactFormForm">
-                <textarea class="textareaGrid" placeholder="What do you want to know?*">
-                </textarea>
-                <input placeholder="First Name*">
-                <input placeholder="Last Name*">
-                <input type="email" placeholder="Your email address*">
-                <button type="submit">Send your question</button>
-            </form>
+                <form class="contactFormForm">
+                    <textarea class="textarea" placeholder="What do you want to know?*"></textarea>
+                    <input type="text" placeholder="First Name*" class="firstName">
+                    <input type="text" placeholder="Last Name*" class="lastName">
+                    <input type="email" placeholder="Your email address*" class="email">
+                    <button type="submit" class="allButtons btnSent">Send your question</button>
+                </form>
         </div>
-        <div class="faqList">
+        <div class="faqListBox">
             <h2>FAQS</h2>
             <h1>Find your answer here.</h1>
-            <ul>
-                <li>
-                    What is Hiderband?
-                </li>
-                <li>
-                    Does Hiber have its own satellite constellation?
-                </li>
-                <li>
-                    What does the service cost?
-                </li>
-            </ul>
-            <input type="button" name="Read all FAQS">
+            <div class="faqList">
+                <ul>
+                    <li>
+                        What is Hiderband?
+                    </li>
+                    <li>
+                        Does Hiber have its own satellite constellation?
+                    </li>
+                    <li>
+                        What does the service cost?
+                    </li>
+                </ul>
+            </div>
+            <br/>
+            <button type="submit" name="Read all FAQS" class="allButtons btnFaq">Read all faqs</button>
         </div>
     </body>
 </html>

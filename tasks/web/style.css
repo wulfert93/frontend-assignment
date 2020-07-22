@@ -2,14 +2,83 @@
     font-family: Europa-Bold;
     src: url(./assets/fonts/Europa-Bold.otf)
 }
-*{
-    font-family: Europa-Bold;
+@font-face{
+    font-family: Europa-Regular;
+    src: url(./assets/fonts/Europa-Regular.otf)
 }
-/* FormBox */
+body{
+    font-family: Europa-Bold;
+    color:#002d3c;
+}
+.allButtons{
+    background-color:#f54c4c;
+    color: white;
+    border-style: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
 .contactFormBox{
+    padding-top: 2px;
+    padding-bottom: 10px;
+    background-color: #f4fafe;
     text-align: center;
-    background-color: aquamarine;
-    /* display: flex;
-    flex-flow: row wrap;
-    align-items: center; */
+    height: auto;
+}
+.contactFormBox p{
+    font-family: Europa-Regular;
+}
+.contactFormForm{
+    height: 250px;
+    display: inline-grid;
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    border-style: none;
+}
+.textarea{
+    height: 200px;
+    margin-left: 20px;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end:4;
+    opacity: 0.5;
+}
+.firstName{
+    grid-column-start: 2;
+    grid-row-start:1;
+    opacity: 0.5;
+}
+.lastName{
+  grid-column-start:3;
+  grid-row-start: 1;
+  opacity: 0.5;
+}
+.email{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    opacity: 0.5;
+}
+.btnSent{
+    grid-column-start:2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    margin-top:20px ;
+}
+.faqListBox{
+    text-align: center;
+}
+.faqList{
+    display: inline-block;
+    text-align: left;
+}
+.faqList ul{
+    list-style-image: url(./assets/plus.svg);
+}
+.faqList li{
+    padding-top: 10px;
+}
+.btnFaq{
+    width: 200px;
+    height: 40px;
 }
