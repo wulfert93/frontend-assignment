@@ -18,7 +18,7 @@ body{
     width: 1440px;
     height: 1588px;
 }
-h1, h2, h3, h4, h5, .smallCaption{
+h1, h2, h3, h4, h5{
     font-family: Europa-Bold;
 }
 h1{
@@ -68,35 +68,6 @@ p{
     line-height: 22px;
     color: #929ca3;
 }
-/* .subtitleBig{
-    font-family: Lora-Regular-Italic;
-    font-size: 20px;
-    line-height: 24px;
-    letter-spacing: -0.33px;
-}
-.subtitleSmall{
-    font-family: Lora-Regular-Italic;
-    font-size: 16px;
-    line-height: 20px;
-    letter-spacing: 0px;
-} */
-/* .body1{
-    font-family: Europa-Light;
-    font-size: 18px;
-    line-height: 36px;
-} */
-/* .body2{
-    font-family: Europa-Light;
-    font-size: 16px;
-    line-height: 22px;
-} */
-/* .smallCaption{
-    font-size: 10px;
-    color: #bcc9d1;
-    text-transform: uppercase;
-    line-height: 13px;
-    letter-spacing: 0.7px;
-} */
 .allButtons{
     background-color: #f54c4c;
     color: white;
@@ -144,44 +115,39 @@ p{
     width: 430px;
     height: 177px;
 }
-
+/* .formTextareaInput::-webkit-resizer{
+    color: #e2e9ef;
+} */
 .faqBox{
     text-align: center;
     padding-top: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .faqList{
     display: inline-block;
     text-align: left;
 }
-/*.faqList>*{
-    text-align: center;
-} */
 .faqList ul{
     display: block;
     text-align: left;
 }
-/* .faqList li{
-    float: left;
-} */
-.faqList li:first-child, .faqList li:last-child{
+.faqList ul:first-child, .faqList ul:last-child{
     list-style-image: url(./assets/plus.svg);
 }
-.faqList li:nth-child(2){
+.faqList ul:nth-child(2){
     list-style-image: url(./assets/minus.svg);
 }
-.mask{
-    /* width: 32px;
-    height: 32px; */
-    border-radius: 46px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-image-source: linear-gradient(to top, rgba(0, 45, 60, 0.2), rgba(244, 250, 254, 0) -79%);
-    border-image-slice: 1;
-    /* background-image: linear-gradient(to bottom, white, white, linear-gradient(to top, rgba(0, 45, 60, 0.2), rgba(244, 250, 254, 0) -79%); */
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+hr{
+    width: 880px;
+    height: 1px;
+    opacity: 0.4;
+    /* background-image: linear-gradient(to left, rgba(0, 45, 60, 0), var(--daintree) 49%, rgba(0, 45, 60, 0)); */
 }
 .btnFaq{
+    margin-top: 77px;
     width: 167px;
     height: 48px;
 }
