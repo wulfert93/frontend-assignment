@@ -183,27 +183,27 @@ class Rectangle {
  *   'abracadabra'  => 'c'
  *   'entente' => null
  */
-// const findFirstSingleChar = (str) => {
-//   if(str)
-//   {
-//     for (i=0; i<str.length; i++) 
-//     {
-//       if (str.indexOf(str[i]) !== str.lastIndexOf(str[i]) ) {
-//         console.log(`repeats`);
-//         return;
-//       }
-//       else{
-//         console.log(`does not repeat`);
-//         return;
-//       }
-//       console.log()
-//     }
-//   }
-//   else
-//   {
-//   throw new Error('No string is given');
-// }};
-// console.log(findFirstSingleChar('baard'));
+const findFirstSingleChar = (str) => {
+  if(str)
+  {
+    for (i=0; i<str.length; i++) 
+    {
+      if (str.indexOf(str[i]) !== str.lastIndexOf(str[i]) ) {
+        console.log(`repeats`);
+        return;
+      }
+      else{
+        console.log(`does not repeat`);
+        return;
+      }
+      console.log()
+    }
+  }
+  else
+  {
+  throw new Error('No string is given');
+}};
+console.log(findFirstSingleChar('baard'));
 /**
  * Returns the password validator regex.
  * Regex will validate a password to make sure it meets the follwing criteria:
@@ -225,8 +225,14 @@ class Rectangle {
  *   'Pa55'.match(validator) => false
  */
 const getPasswordValidator = (minLength) => {
+  if(minLength)
+  {
+    //do
+  }
+  else
+  {
   throw new Error('Not implemented');
-};
+}};
 
 module.exports = {
   sortCitiesArray,

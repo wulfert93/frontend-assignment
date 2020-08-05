@@ -116,18 +116,9 @@ const getCardId = (value) =>{
  *   (-5,0) (10,-10) => 18.027756377319946
  */
 // const getDistanceBetweenPoints = (x1, y1, x2, y2) => {
-//   if(x1 && y1)
-//   {();
-//     const xDiff = x1 - x2; 
-//     const yDiff = y2 - y2;
-//     console.log(Math.sqrt(xDiff * xDiff + yDiff * yDiff));
+//     throw new Error('not all arguments are given');
 //   }
-//   else
-//   {
-//     throw new Error('Not implemented');
-//   }
-// };
-// getDistanceBetweenPoints((-5,0) (10,-10));
+// getDistanceBetweenPoints(('-5','0')('10','-10'));
 /**
  * Returns an index of the specified element in array or -1 if element is not found
  *

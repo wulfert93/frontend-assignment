@@ -1,0 +1,187 @@
+@font-face{
+    font-family: Europa-Bold;
+    src: url(./assets/fonts/static/Europa-Bold.ttf)
+}
+@font-face{
+    font-family: Lora-Regular-Italic;
+    src: url(./assets/fonts/static/Lora-Italic.ttf)
+}
+@font-face{
+    font-family: Europa-Light;
+    src: url(./assets/fonts/static/Europa-Light.ttf)
+}
+body{
+    color: #002d3c;
+    text-align: center;
+    margin:0;
+    padding:0;
+    width: 1440px;
+    height: 1588px;
+}
+h1, h2, h3, h4, h5, .smallCaption{
+    font-family: Europa-Bold;
+}
+h1{
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: -1.17px
+}
+h2{
+    font-size: 36px;
+    line-height: 38px;
+    letter-spacing: -0.86px;
+}
+h3{
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: -0.36px;
+}
+h4{
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.27px;
+}
+h5{
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+p{
+    font-family: Europa-Light;
+    font-size: 18px;
+    line-height: 26px;
+}
+.formTextareaInput::placeholder{
+    font-family: Europa-Light;
+    font-size: 16px;
+    padding-top: 14px;
+    padding-left: 3.9%;
+    line-height: 22px;
+    color: #929ca3;
+}
+.formNameInput::placeholder, .formEmailInput::placeholder{
+    font-family: Europa-Light;
+    font-size: 16px;
+    padding-left: 3.7%;
+    padding-top: 29.2%;
+    line-height: 22px;
+    color: #929ca3;
+}
+/* .subtitleBig{
+    font-family: Lora-Regular-Italic;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.33px;
+}
+.subtitleSmall{
+    font-family: Lora-Regular-Italic;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0px;
+} */
+/* .body1{
+    font-family: Europa-Light;
+    font-size: 18px;
+    line-height: 36px;
+} */
+/* .body2{
+    font-family: Europa-Light;
+    font-size: 16px;
+    line-height: 22px;
+} */
+/* .smallCaption{
+    font-size: 10px;
+    color: #bcc9d1;
+    text-transform: uppercase;
+    line-height: 13px;
+    letter-spacing: 0.7px;
+} */
+.allButtons{
+    background-color: #f54c4c;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+    font-family: Europa-Bold;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.formBox{
+    background-color: #f4fafe;
+    padding-top: 184px;
+    width: 1440px;
+    height: 702px;
+}
+.contactForm{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+.flexColumn>*{
+    height: 48px;   
+}
+.formNameInput, .formEmailInput, .formTextareaInput{
+    border-radius: 4px;
+    border: 0.5px solid;
+    border-color: #d7e0e6;
+    color: #e2e9ef;
+}
+.formNameInput{
+    width: 430px;
+}
+.formEmailInput, .btnSent{
+    margin-top: 16px;
+}
+.formTextareaInput{
+    width: 430px;
+    height: 177px;
+}
+
+.faqBox{
+    text-align: center;
+    padding-top: 136px;
+}
+.faqList{
+    display: inline-block;
+    text-align: left;
+}
+/*.faqList>*{
+    text-align: center;
+} */
+.faqList ul{
+    display: block;
+    text-align: left;
+}
+/* .faqList li{
+    float: left;
+} */
+.faqList li:first-child, .faqList li:last-child{
+    list-style-image: url(./assets/plus.svg);
+}
+.faqList li:nth-child(2){
+    list-style-image: url(./assets/minus.svg);
+}
+.mask{
+    /* width: 32px;
+    height: 32px; */
+    border-radius: 46px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-image-source: linear-gradient(to top, rgba(0, 45, 60, 0.2), rgba(244, 250, 254, 0) -79%);
+    border-image-slice: 1;
+    /* background-image: linear-gradient(to bottom, white, white, linear-gradient(to top, rgba(0, 45, 60, 0.2), rgba(244, 250, 254, 0) -79%); */
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.btnFaq{
+    width: 167px;
+    height: 48px;
+}
